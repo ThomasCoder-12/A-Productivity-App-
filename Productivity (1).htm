@@ -1,0 +1,545 @@
+<html>
+<body style="background-color:powderblue">
+<title>TP</title>
+
+<html lang="en">
+<head>
+<p id="demo1" style="color:white;font-size:170%"></p>
+
+<script>
+var myVar = setInterval(myTimer, 1000);
+
+function myTimer() {
+  var d = new Date();
+  var t = d.toLocaleTimeString();
+  document.getElementById("demo1").innerHTML = t;
+}
+</script>
+<p id="demo" style="color:white"></p>
+<script>
+let day;
+switch (new Date().getDay()) {
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+    day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case  6:
+    day = "Saturday";
+}
+document.getElementById("demo").innerHTML = "<span style='text-size:900%'>Today is  </span>" + day;
+</script><hr>
+
+
+<input size=10 placeholder="Your name here..." id="name" onkeyup='saveValue(this);'/>
+</input>'s Productivity
+
+<script type="text/javascript">
+        document.getElementById("name").value = getSavedValue("name");    // set the value to this input
+        /* Here you can add more inputs to set value. if it's saved */
+        //Save the value function - save it to localStorage as (ID, VALUE)
+        function saveValue(e){
+            var id = e.id;  // get the sender's id to save it . 
+            var val = e.value; // get the value. 
+            localStorage.setItem(id, val);// Every time user writing something, the localStorage's value will override . 
+        }
+
+        //get the saved value function - return the value of "v" from localStorage. 
+        function getSavedValue  (v){
+            if (!localStorage.getItem(v)) {
+                return "";// You can change this to your defualt value. 
+            }
+            return localStorage.getItem(v);
+        }
+</script><hr>
+
+<h2><u>Pomodoro</u></h2>
+
+<p>Your record of studying till now</p>
+<input type="text" placeholder="Type the number only" id="s" onkeyup='saveValue(this);'/>
+</input>
+
+<script type="text/javascript">
+        document.getElementById("s").value = getSavedValue("s");    // set the value to this input
+        /* Here you can add more inputs to set value. if it's saved */
+        //Save the value function - save it to localStorage as (ID, VALUE)
+        function saveValue(e){
+            var id = e.id;  // get the sender's id to save it . 
+            var val = e.value; // get the value. 
+            localStorage.setItem(id, val);// Every time user writing something, the localStorage's value will override . 
+        }
+
+        //get the saved value function - return the value of "v" from localStorage. 
+        function getSavedValue  (v){
+            if (!localStorage.getItem(v)) {
+                return "";// You can change this to your defualt value. 
+            }
+            return localStorage.getItem(v);
+        }
+</script><br><br>
+
+<h3>Pomodoro-Timer</h3>
+
+<iframe src="https://drive.google.com/file/d/1EwUn-Gfz4Kz2FUJkYdIUhOLQk9ylHssL/preview" width="640" height="480"></iframe><hr>
+
+<h2><u>Time-Table</u></h2>
+
+<input type="text" id="t1" placeholder="Time" onkeyup='saveValue(this);'/>
+<input type="text" id="t2" placeholder="Event" onkeyup='saveValue(this);'/><br><br>
+<input type="text" id="t3" onkeyup='saveValue(this);'/>
+<input type="text" id="t4" onkeyup='saveValue(this);'/><br><br>
+<input type="text" id="t5" onkeyup='saveValue(this);'/>
+<input type="text" id="t6" onkeyup='saveValue(this);'/><br><br>
+<input type="text" id="t7" onkeyup='saveValue(this);'/>
+<input type="text" id="t8" onkeyup='saveValue(this);'/><br><br>
+<input type="text" id="t9" onkeyup='saveValue(this);'/>
+<input type="text" id="t10" onkeyup='saveValue(this);'/><br><br>
+<input type="text" id="t11" onkeyup='saveValue(this);'/>
+<input type="text" id="t12" onkeyup='saveValue(this);'/><br><br>
+<input type="text" id="t13" onkeyup='saveValue(this);'/>
+<input type="text" id="t14" onkeyup='saveValue(this);'/><br><br>
+<input type="text" id="t15" onkeyup='saveValue(this);'/>
+<input type="text" id="t16" onkeyup='saveValue(this);'/><br><br>
+<input type="text" id="t17" onkeyup='saveValue(this);'/>
+<input type="text" id="t18" onkeyup='saveValue(this);'/><br><br>
+<input type="text" id="t19" onkeyup='saveValue(this);'/>
+<input type="text" id="t20" onkeyup='saveValue(this);'/><br><br>
+<input type="text" id="t21" onkeyup='saveValue(this);'/>
+<input type="text" id="t22" onkeyup='saveValue(this);'/><br><br>
+<input type="text" id="t23" onkeyup='saveValue(this);'/>
+<input type="text" id="t24" onkeyup='saveValue(this);'/><br><br>
+<input type="text" id="t25" onkeyup='saveValue(this);'/>
+<input type="text" id="t26" onkeyup='saveValue(this);'/><br><br>
+<input type="text" id="t27" onkeyup='saveValue(this);'/>
+<input type="text" id="t28" onkeyup='saveValue(this);'/><br><br>
+<input type="text" id="t29" onkeyup='saveValue(this);'/>
+<input type="text" id="t30" onkeyup='saveValue(this);'/><br><br>
+
+
+<script type="text/javascript">
+        document.getElementById("t1").value = getSavedValue("t1");    // set the value to this input
+        document.getElementById("t2").value = getSavedValue("t2");   // set the value to this input
+        document.getElementById("t3").value = getSavedValue("t3");   // set the value to this input
+        document.getElementById("t4").value = getSavedValue("t4");   // set the value to this input
+        document.getElementById("t5").value = getSavedValue("t5");   // set the value to this input
+        document.getElementById("t6").value = getSavedValue("t6");   // set the value to this input
+        document.getElementById("t7").value = getSavedValue("t7");   // set the value to this input
+        document.getElementById("t8").value = getSavedValue("t8");   // set the value to this input
+        document.getElementById("t9").value = getSavedValue("t9");    // set the value to this input
+        document.getElementById("t10").value = getSavedValue("t10");   // set the value to this input
+        document.getElementById("t11").value = getSavedValue("t11");   // set the value to this input
+        document.getElementById("t12").value = getSavedValue("t12");   // set the value to this input
+        document.getElementById("t13").value = getSavedValue("t13");   // set the value to this input
+        document.getElementById("t14").value = getSavedValue("t14");   // set the value to this input
+        document.getElementById("t15").value = getSavedValue("t15");   // set the value to this input
+        document.getElementById("t16").value = getSavedValue("t16");   // set the value to this input
+        document.getElementById("t17").value = getSavedValue("t17");   // set the value to this input
+        document.getElementById("t18").value = getSavedValue("t18");   // set the value to this input
+        document.getElementById("t19").value = getSavedValue("t19");   // set the value to this input
+        document.getElementById("t20").value = getSavedValue("t20");   // set the value to this input
+        document.getElementById("t21").value = getSavedValue("t21");   // set the value to this input
+        document.getElementById("t22").value = getSavedValue("t22");   // set the value to this input
+        document.getElementById("t23").value = getSavedValue("t23");   // set the value to this input
+        document.getElementById("t24").value = getSavedValue("t24");   // set the value to this input
+        document.getElementById("t25").value = getSavedValue("t25");   // set the value to this input
+        document.getElementById("t26").value = getSavedValue("t26");   // set the value to this input
+        document.getElementById("t27").value = getSavedValue("t27");   // set the value to this input
+        document.getElementById("t28").value = getSavedValue("t28");   // set the value to this input
+        document.getElementById("t29").value = getSavedValue("t29");   // set the value to this input
+        document.getElementById("t30").value = getSavedValue("t30");   // set the value to this input
+        document.getElementById("t31").value = getSavedValue("t31");   // set the value to this input
+
+        /* Here you can add more inputs to set value. if it's saved */
+        //Save the value function - save it to localStorage as (ID, VALUE)
+        function saveValue(e){
+            var id = e.id;  // get the sender's id to save it . 
+            var val = e.value; // get the value. 
+            localStorage.setItem(id, val);// Every time user writing something, the localStorage's value will override . 
+        }
+
+        //get the saved value function - return the value of "v" from localStorage. 
+        function getSavedValue  (v){
+            if (!localStorage.getItem(v)) {
+                return "";// You can change this to your defualt value. 
+            }
+            return localStorage.getItem(v);
+        }
+</script><hr>
+
+<h2><u>Notes</u></h2>
+
+<textarea rows=20 cols=55 type="text" id="notes" placeholder="type here..." onkeyup='saveValue(this);'/>
+</textarea>
+
+<script type="text/javascript">
+        document.getElementById("notes").value = getSavedValue("notes");    // set the value to this input
+        /* Here you can add more inputs to set value. if it's saved */
+        //Save the value function - save it to localStorage as (ID, VALUE)
+        function saveValue(e){
+            var id = e.id;  // get the sender's id to save it . 
+            var val = e.value; // get the value. 
+            localStorage.setItem(id, val);// Every time user writing something, the localStorage's value will override . 
+        }
+
+        //get the saved value function - return the value of "v" from localStorage. 
+        function getSavedValue  (v){
+            if (!localStorage.getItem(v)) {
+                return "";// You can change this to your defualt value. 
+            }
+            return localStorage.getItem(v);
+        }
+</script><hr>
+
+<h2><u>To-Do List</u></h2>
+
+<input type="checkbox">
+<input type="text" id="i1" onkeyup='saveValue(this);'/><br><br>
+<input type="checkbox">
+<input type="text" id="i2" onkeyup='saveValue(this);'/><br><br>
+<input type="checkbox">
+<input type="text" id="i3" onkeyup='saveValue(this);'/><br><br>
+<input type="checkbox">
+<input type="text" id="i4" onkeyup='saveValue(this);'/><br><br>
+<input type="checkbox">
+<input type="text" id="i5" onkeyup='saveValue(this);'/><br><br>
+<input type="checkbox">
+<input type="text" id="i6" onkeyup='saveValue(this);'/><br><br>
+<input type="checkbox">
+<input type="text" id="i7" onkeyup='saveValue(this);'/><br><br>
+<input type="checkbox">
+<input type="text" id="i8" onkeyup='saveValue(this);'/><br><br>
+
+
+<script type="text/javascript">
+        document.getElementById("i1").value = getSavedValue("i1");    // set the value to this input
+        /* Here you can add more inputs to set value. if it's saved */
+        //Save the value function - save it to localStorage as (ID, VALUE)
+        function saveValue(e){
+            var id = e.id;  // get the sender's id to save it . 
+            var val = e.value; // get the value. 
+            localStorage.setItem(id, val);// Every time user writing something, the localStorage's value will override . 
+        }
+
+        //get the saved value function - return the value of "v" from localStorage. 
+        function getSavedValue  (v){
+            if (!localStorage.getItem(v)) {
+                return "";// You can change this to your defualt value. 
+            }
+            return localStorage.getItem(v);
+        }
+</script>
+
+<script type="text/javascript">
+        document.getElementById("i2").value = getSavedValue("i2");    // set the value to this input
+        /* Here you can add more inputs to set value. if it's saved */
+        //Save the value function - save it to localStorage as (ID, VALUE)
+        function saveValue(e){
+            var id = e.id;  // get the sender's id to save it . 
+            var val = e.value; // get the value. 
+            localStorage.setItem(id, val);// Every time user writing something, the localStorage's value will override . 
+        }
+
+        //get the saved value function - return the value of "v" from localStorage. 
+        function getSavedValue  (v){
+            if (!localStorage.getItem(v)) {
+                return "";// You can change this to your defualt value. 
+            }
+            return localStorage.getItem(v);
+        }
+</script>
+
+<script type="text/javascript">
+        document.getElementById("i3").value = getSavedValue("i3");    // set the value to this input
+        /* Here you can add more inputs to set value. if it's saved */
+        //Save the value function - save it to localStorage as (ID, VALUE)
+        function saveValue(e){
+            var id = e.id;  // get the sender's id to save it . 
+            var val = e.value; // get the value. 
+            localStorage.setItem(id, val);// Every time user writing something, the localStorage's value will override . 
+        }
+
+        //get the saved value function - return the value of "v" from localStorage. 
+        function getSavedValue  (v){
+            if (!localStorage.getItem(v)) {
+                return "";// You can change this to your defualt value. 
+            }
+            return localStorage.getItem(v);
+        }
+</script>
+
+<script type="text/javascript">
+        document.getElementById("i4").value = getSavedValue("i4");    // set the value to this input
+        /* Here you can add more inputs to set value. if it's saved */
+        //Save the value function - save it to localStorage as (ID, VALUE)
+        function saveValue(e){
+            var id = e.id;  // get the sender's id to save it . 
+            var val = e.value; // get the value. 
+            localStorage.setItem(id, val);// Every time user writing something, the localStorage's value will override . 
+        }
+
+        //get the saved value function - return the value of "v" from localStorage. 
+        function getSavedValue  (v){
+            if (!localStorage.getItem(v)) {
+                return "";// You can change this to your defualt value. 
+            }
+            return localStorage.getItem(v);
+        }
+</script>
+
+<script type="text/javascript">
+        document.getElementById("i5").value = getSavedValue("i5");    // set the value to this input
+        /* Here you can add more inputs to set value. if it's saved */
+        //Save the value function - save it to localStorage as (ID, VALUE)
+        function saveValue(e){
+            var id = e.id;  // get the sender's id to save it . 
+            var val = e.value; // get the value. 
+            localStorage.setItem(id, val);// Every time user writing something, the localStorage's value will override . 
+        }
+
+        //get the saved value function - return the value of "v" from localStorage. 
+        function getSavedValue  (v){
+            if (!localStorage.getItem(v)) {
+                return "";// You can change this to your defualt value. 
+            }
+            return localStorage.getItem(v);
+        }
+</script>
+
+<script type="text/javascript">
+        document.getElementById("i6").value = getSavedValue("i6");    // set the value to this input
+        /* Here you can add more inputs to set value. if it's saved */
+        //Save the value function - save it to localStorage as (ID, VALUE)
+        function saveValue(e){
+            var id = e.id;  // get the sender's id to save it . 
+            var val = e.value; // get the value. 
+            localStorage.setItem(id, val);// Every time user writing something, the localStorage's value will override . 
+        }
+
+        //get the saved value function - return the value of "v" from localStorage. 
+        function getSavedValue  (v){
+            if (!localStorage.getItem(v)) {
+                return "";// You can change this to your defualt value. 
+            }
+            return localStorage.getItem(v);
+        }
+</script>
+
+<script type="text/javascript">
+        document.getElementById("i7").value = getSavedValue("i7");    // set the value to this input
+        /* Here you can add more inputs to set value. if it's saved */
+        //Save the value function - save it to localStorage as (ID, VALUE)
+        function saveValue(e){
+            var id = e.id;  // get the sender's id to save it . 
+            var val = e.value; // get the value. 
+            localStorage.setItem(id, val);// Every time user writing something, the localStorage's value will override . 
+        }
+
+        //get the saved value function - return the value of "v" from localStorage. 
+        function getSavedValue  (v){
+            if (!localStorage.getItem(v)) {
+                return "";// You can change this to your defualt value. 
+            }
+            return localStorage.getItem(v);
+        }
+</script>
+
+<script type="text/javascript">
+        document.getElementById("i8").value = getSavedValue("i8");    // set the value to this input
+        /* Here you can add more inputs to set value. if it's saved */
+        //Save the value function - save it to localStorage as (ID, VALUE)
+        function saveValue(e){
+            var id = e.id;  // get the sender's id to save it . 
+            var val = e.value; // get the value. 
+            localStorage.setItem(id, val);// Every time user writing something, the localStorage's value will override . 
+        }
+
+        //get the saved value function - return the value of "v" from localStorage. 
+        function getSavedValue  (v){
+            if (!localStorage.getItem(v)) {
+                return "";// You can change this to your defualt value. 
+            }
+            return localStorage.getItem(v);
+        }
+</script><hr>
+
+<h2 style="color:green;font-family:verdana">What is TP?</h2><p style="color:green">click the underlined words for it's definition</p>
+<p style="color:green;font-family:verdana">TP is an app that helps you to study and make your day a nicer one.It includes :
+
+<style>
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 220px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
+<body style="text-align:center;">
+
+<div class="tooltip" style="color:green;font-family:verdana">A Pomodoro timer
+  <span class="tooltiptext">Which is used to study for 30 mins and take a break for 5 mins with a Countdown timer</span>
+</div></p>
+
+<style>
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 220px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
+<body style="text-align:center;">
+
+<div class="tooltip" style="color:green;font-family:verdana">A clock
+  <span class="tooltiptext">12 houred format</span>
+</div></p>
+
+<style>
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 220px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
+<body style="text-align:center;">
+
+<div class="tooltip" style="color:green;font-family:verdana">A Notepad
+  <span class="tooltiptext">For noting information and writing your personal notes</span>
+</div></p>
+
+<style>
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 220px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
+<body style="text-align:center;">
+
+<div class="tooltip" style="color:green;font-family:verdana">A Time-table maker
+  <span class="tooltiptext">To create your timetables</span>
+</div></p>
+
+<style>
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 220px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
+<body style="text-align:center;">
+
+<div class="tooltip" style="color:green;font-family:verdana">A To-do list
+  <span class="tooltiptext">a list of things that one wants to get done or to do</span>
+</div></p>
+
+<h2 style="color:green;font-family:courier">So, study well! all the best!</h2><hr>
+
+  </body>
+</html>
+
+
+
+
+
+
